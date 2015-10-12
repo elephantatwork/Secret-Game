@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 1bf90cf70765945c4936a3cb7dc5df38
+timeCreated: 1441119505
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Cube
+    100002: Cube_001
+    100004: Cube_002
+    100006: Cube_003
+    100008: Cube_004
+    100010: //RootNode
+    100012: Entrance
+    100014: Player
+    100016: Entrance_001
+    100018: ActiveMarker
+    100020: ActiveMarker_001
+    100022: Door
+    100024: DoorLeft
+    100026: DoorLeft_001
+    100028: Entrance_002
+    400000: Cube
+    400002: Cube_001
+    400004: Cube_002
+    400006: Cube_003
+    400008: Cube_004
+    400010: //RootNode
+    400012: Entrance
+    400014: Player
+    400016: Entrance_001
+    400018: ActiveMarker
+    400020: ActiveMarker_001
+    400022: Door
+    400024: DoorLeft
+    400026: DoorLeft_001
+    400028: Entrance_002
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Cube_002
+    2300006: Cube_003
+    2300008: Cube_004
+    2300010: Entrance
+    2300012: Player
+    2300014: Entrance_001
+    2300016: ActiveMarker
+    2300018: ActiveMarker_001
+    2300020: DoorLeft
+    2300022: DoorLeft_001
+    2300024: Entrance_002
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Cube_002
+    3300006: Cube_003
+    3300008: Cube_004
+    3300010: Entrance
+    3300012: Player
+    3300014: Entrance_001
+    3300016: ActiveMarker
+    3300018: ActiveMarker_001
+    3300020: DoorLeft
+    3300022: DoorLeft_001
+    3300024: Entrance_002
+    4300000: Cube_004
+    4300002: Cube_003
+    4300004: Cube_002
+    4300006: Cube_001
+    4300008: Cube
+    4300010: Entrance
+    4300012: Player
+    4300014: Entrance_001
+    4300016: Entrance_002
+    4300018: DoorLeft_001
+    4300020: DoorLeft
+    4300022: ActiveMarker_001
+    4300024: ActiveMarker
+    6400000: Entrance
+    6400002: Entrance_001
+    6400004: Player
+    6400006: ActiveMarker
+    6400008: ActiveMarker_001
+    6400010: DoorLeft
+    6400012: DoorLeft_001
+    6400014: Entrance_002
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

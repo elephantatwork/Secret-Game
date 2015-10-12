@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: ba4a40fc6a1d4423b868576c97a06122
+timeCreated: 1441197423
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Armature
+    100004: contr_bone
+    100006: controlindex
+    100008: controlring
+    100010: Empty
+    100012: hand_001
+    100014: //RootNode
+    100016: Index1
+    100018: Index2
+    100020: Index3
+    100022: Mid1
+    100024: Mid2
+    100026: Mid3
+    100028: Palm
+    100030: Pinky1
+    100032: Pinky2
+    100034: Pinky3
+    100036: Ring1
+    100038: Ring2
+    100040: Ring3
+    100042: Thumb1
+    100044: Thumb2
+    100046: Thumb3
+    100048: Wrist
+    400000: Arm
+    400002: Armature
+    400004: contr_bone
+    400006: controlindex
+    400008: controlring
+    400010: Empty
+    400012: hand_001
+    400014: //RootNode
+    400016: Index1
+    400018: Index2
+    400020: Index3
+    400022: Mid1
+    400024: Mid2
+    400026: Mid3
+    400028: Palm
+    400030: Pinky1
+    400032: Pinky2
+    400034: Pinky3
+    400036: Ring1
+    400038: Ring2
+    400040: Ring3
+    400042: Thumb1
+    400044: Thumb2
+    400046: Thumb3
+    400048: Wrist
+    4300000: hand_001
+    7400000: Default Take
+    7400002: ArmatureAction_001
+    9500000: //RootNode
+    13700000: hand_001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 249
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm
+        weight: 1
+      - path: Armature/Arm/Wrist
+        weight: 1
+      - path: Armature/Arm/Wrist/Index1
+        weight: 1
+      - path: Armature/Arm/Wrist/Index1/Index2
+        weight: 1
+      - path: Armature/Arm/Wrist/Index1/Index2/Index3
+        weight: 1
+      - path: Armature/Arm/Wrist/Mid1
+        weight: 1
+      - path: Armature/Arm/Wrist/Mid1/Mid2
+        weight: 1
+      - path: Armature/Arm/Wrist/Mid1/Mid2/Mid3
+        weight: 1
+      - path: Armature/Arm/Wrist/Palm
+        weight: 1
+      - path: Armature/Arm/Wrist/Palm/Pinky1
+        weight: 1
+      - path: Armature/Arm/Wrist/Palm/Pinky1/Pinky2
+        weight: 1
+      - path: Armature/Arm/Wrist/Palm/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Armature/Arm/Wrist/Ring1
+        weight: 1
+      - path: Armature/Arm/Wrist/Ring1/Ring2
+        weight: 1
+      - path: Armature/Arm/Wrist/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Armature/Arm/Wrist/Thumb1
+        weight: 1
+      - path: Armature/Arm/Wrist/Thumb1/Thumb2
+        weight: 1
+      - path: Armature/Arm/Wrist/Thumb1/Thumb2/Thumb3
+        weight: 1
+      - path: Armature/contr_bone
+        weight: 1
+      - path: Armature/controlindex
+        weight: 1
+      - path: Armature/controlring
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: hand_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction_001
+      takeName: ArmatureAction_001
+      firstFrame: -1
+      lastFrame: 84
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm
+        weight: 1
+      - path: Armature/Arm/Wrist
+        weight: 1
+      - path: Armature/Arm/Wrist/Index1
+        weight: 1
+      - path: Armature/Arm/Wrist/Index1/Index2
+        weight: 1
+      - path: Armature/Arm/Wrist/Index1/Index2/Index3
+        weight: 1
+      - path: Armature/Arm/Wrist/Mid1
+        weight: 1
+      - path: Armature/Arm/Wrist/Mid1/Mid2
+        weight: 1
+      - path: Armature/Arm/Wrist/Mid1/Mid2/Mid3
+        weight: 1
+      - path: Armature/Arm/Wrist/Palm
+        weight: 1
+      - path: Armature/Arm/Wrist/Palm/Pinky1
+        weight: 1
+      - path: Armature/Arm/Wrist/Palm/Pinky1/Pinky2
+        weight: 1
+      - path: Armature/Arm/Wrist/Palm/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Armature/Arm/Wrist/Ring1
+        weight: 1
+      - path: Armature/Arm/Wrist/Ring1/Ring2
+        weight: 1
+      - path: Armature/Arm/Wrist/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Armature/Arm/Wrist/Thumb1
+        weight: 1
+      - path: Armature/Arm/Wrist/Thumb1/Thumb2
+        weight: 1
+      - path: Armature/Arm/Wrist/Thumb1/Thumb2/Thumb3
+        weight: 1
+      - path: Armature/contr_bone
+        weight: 1
+      - path: Armature/controlindex
+        weight: 1
+      - path: Armature/controlring
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: hand_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 50
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
