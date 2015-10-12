@@ -129,19 +129,19 @@ public class Walker : MonoBehaviour
 	private void Sound(soundStates _newState){
 
 		if(_newState == soundStates.forward)
-			Fabric.EventManager.Instance.SetGlobalSwitch("PlayerMovement", "playerForward");
+			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerForward", gameObject);
 
 		if(_newState == soundStates.back)
-			Fabric.EventManager.Instance.SetGlobalSwitch("PlayerMovement", "playerBack");
-
+			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerBack", gameObject);
+			
 		if(_newState == soundStates.rotationLeft)
-			Fabric.EventManager.Instance.SetGlobalSwitch("PlayerRotation", "playerRotationLeft");
+			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerRotationLeft", gameObject);
 
 		if(_newState == soundStates.rotationRight)
-			Fabric.EventManager.Instance.SetGlobalSwitch("PlayerRotation", "playerRotationRight");
+			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerRotationRight", gameObject);
 
 		if(_newState == soundStates.idle)
-			Fabric.EventManager.Instance.SetGlobalSwitch("PlayerMovement", "playerIdle");
+			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerIdle", gameObject);
 	}
 
 	private void ToggleFast (bool _state)
