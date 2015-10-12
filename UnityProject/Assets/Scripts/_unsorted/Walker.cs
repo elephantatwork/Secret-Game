@@ -30,6 +30,7 @@ public class Walker : MonoBehaviour
 	{
 	
 		idle,
+		onlyRotation,
 		forward,
 		back,
 		rotationLeft,
@@ -134,15 +135,18 @@ public class Walker : MonoBehaviour
 
 		if(_newState == soundStates.back)
 			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerBack", gameObject);
-			
+
+		if(_newState == soundStates.idle)
+			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerIdle", gameObject);
+
+		if(_newState == soundStates.onlyRotation)
+			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerRotationOnly", gameObject);
+
 		if(_newState == soundStates.rotationLeft)
 			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationLeft", gameObject);
 
 		if(_newState == soundStates.rotationRight)
 			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationRight", gameObject);
-
-		if(_newState == soundStates.idle)
-			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerIdle", gameObject);
 
 		if(_newState == soundStates.rotationIdle)
 			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationIdle", gameObject);
@@ -193,8 +197,11 @@ public class Walker : MonoBehaviour
 			Sound(soundStates.forward);
 		else if(movingValue == -1)
 			Sound(soundStates.back);
-		else if(rotationValue == 0)
+		else if(movingValue == 0)
 			Sound(soundStates.idle);
+	
+
+
 
 	}
 
@@ -232,8 +239,15 @@ public class Walker : MonoBehaviour
 			Sound(soundStates.rotationRight);
 		else if(rotationValue == -1)
 			Sound(soundStates.rotationLeft);
-		else if(movingValue == 0)
+		else if(rotationValue == 0){
 			Sound(soundStates.rotationIdle);
+			if(movingValue == 0)
+				Sound(soundStates.idle);
+		}
+
+		if(rotationValue != 0 && movingValue == 0)
+			Sound(soundStates.onlyRotation);
+
 
 //		if(_newState != null)
 //			Sound(_newState);
