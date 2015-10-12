@@ -34,6 +34,7 @@ public class Walker : MonoBehaviour
 		back,
 		rotationLeft,
 		rotationRight,
+		rotationIdle,
 
 	}
 
@@ -135,13 +136,16 @@ public class Walker : MonoBehaviour
 			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerBack", gameObject);
 			
 		if(_newState == soundStates.rotationLeft)
-			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerRotationLeft", gameObject);
+			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationLeft", gameObject);
 
 		if(_newState == soundStates.rotationRight)
-			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerRotationRight", gameObject);
+			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationRight", gameObject);
 
 		if(_newState == soundStates.idle)
 			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerIdle", gameObject);
+
+		if(_newState == soundStates.rotationIdle)
+			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationIdle", gameObject);
 	}
 
 	private void ToggleFast (bool _state)
@@ -229,7 +233,7 @@ public class Walker : MonoBehaviour
 		else if(rotationValue == -1)
 			Sound(soundStates.rotationLeft);
 		else if(movingValue == 0)
-			Sound(soundStates.idle);
+			Sound(soundStates.rotationIdle);
 
 //		if(_newState != null)
 //			Sound(_newState);
