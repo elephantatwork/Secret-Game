@@ -95,11 +95,23 @@ public class Interactive : MonoBehaviour {
 			iTween.StopByName(activeMarkers[i], "colorActive");
 			iTween.ColorTo(activeMarkers[i], iTween.Hash("name", "colorActive", "color", linkedStateControll.groupColor, "time",colorTranisitonTime));
 		}
+
+		ActivateSound();
+
+
+	}
+
+	public virtual void ActivateSound(){
+
+		Fabric.EventManager.Instance.PostEvent("objectActivate", this.gameObject);
+		
+		Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectActive", this.gameObject);
+
 	}
 	
 	public virtual void Deactivate ()
 	{
-		print ("Eh" + this.name);
+
 		for(int i = 0; i < activeObjects.Count; i++){
 			
 			activeObjects[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", linkedStateControll.groupColor);
@@ -115,6 +127,18 @@ public class Interactive : MonoBehaviour {
 			iTween.StopByName(activeMarkers[i], "colorActive");
 			iTween.ColorTo(activeMarkers[i], iTween.Hash("name", "colorActive", "color", Color.white, "time",colorTranisitonTime));
 		}
+
+		DeactivateSound();
+
+	}
+
+	public virtual void DeactivateSound(){
+
+		//Sound
+		Fabric.EventManager.Instance.PostEvent("objectDeactivate", this.gameObject);
+		
+		Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectInactive", this.gameObject);
+
 	}
 
 }
