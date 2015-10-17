@@ -22,7 +22,7 @@ public class Moveable_Button : MonoBehaviour {
 
 	public void Update(){
 
-		if(localRigidbody.velocity > 0.01F){
+		if(localRigidbody.velocity.magnitude > 0.01F){
 			//Sound
 			Fabric.EventManager.Instance.PostEvent("objectMoves", Fabric.EventAction.SetVolume, 1.0F, this.gameObject);
 
