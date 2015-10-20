@@ -7,7 +7,7 @@ public class InteractiveCore : MonoBehaviour {
 	public Reciever[] allRecievers;
 
 	public Color groupColor;
-	public int groupID; // 1, 2 or 3
+	public int groupID = 1; // 1, 2 or 3
 
 	public bool groupState;
 
