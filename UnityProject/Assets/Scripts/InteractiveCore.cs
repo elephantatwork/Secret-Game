@@ -7,6 +7,7 @@ public class InteractiveCore : MonoBehaviour {
 	public Reciever[] allRecievers;
 
 	public Color groupColor;
+	public int groupID; // 1, 2 or 3
 
 	public bool groupState;
 
@@ -31,7 +32,7 @@ public class InteractiveCore : MonoBehaviour {
 //				allRecievers[i].activeObjects[ia].GetComponent<Renderer>().material.color = groupColor;
 
 			allRecievers[i].localID = i;
-			allRecievers[i].linkedStateControll = this;
+			allRecievers[i].linkedIC = this;
 
 			allRecievers[i].Initialize();
 //			allRecievers[i].Change(allRecievers[i].state);
@@ -49,7 +50,7 @@ public class InteractiveCore : MonoBehaviour {
 //			}
 
 			allSenders[ii].localID = ii;
-			allSenders[ii].linkedStateControll = this;
+			allSenders[ii].linkedIC = this;
 
 			allSenders[ii].Initialize();
 		}

@@ -13,7 +13,7 @@ public class Interactive : MonoBehaviour {
 	public Transform localTransform;
 	public bool state;
 	
-	public InteractiveCore linkedStateControll;
+	public InteractiveCore linkedIC;
 
 	private float colorTranisitonTime = 0.8F;
 	private Renderer localRenderer;
@@ -67,7 +67,7 @@ public class Interactive : MonoBehaviour {
 	public virtual void Change(bool _newState){
 
 		string _state = (_newState) ? "active" : "inactive";
-		Debug.Log("Core " + linkedStateControll.name + ", Object :" + this.name + " is now " + _state);
+		Debug.Log("Core " + linkedIC.name + ", Object :" + this.name + " is now " + _state);
 
 		state = _newState;
 
@@ -90,10 +90,10 @@ public class Interactive : MonoBehaviour {
 		
 		for(int i = 0; i < activeMarkers.Count; i++){
 			
-			activeMarkers[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", linkedStateControll.groupColor);
+			activeMarkers[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", linkedIC.groupColor);
 			
 			iTween.StopByName(activeMarkers[i], "colorActive");
-			iTween.ColorTo(activeMarkers[i], iTween.Hash("name", "colorActive", "color", linkedStateControll.groupColor, "time",colorTranisitonTime));
+			iTween.ColorTo(activeMarkers[i], iTween.Hash("name", "colorActive", "color", linkedIC.groupColor, "time",colorTranisitonTime));
 		}
 
 		ActivateSound();
@@ -103,9 +103,9 @@ public class Interactive : MonoBehaviour {
 
 	public virtual void ActivateSound(){
 
-		Fabric.EventManager.Instance.PostEvent("objectActivate", this.gameObject);
+		Fabric.EventManager.Instance.PostEvent("objectActivate_"+ linkedIC.groupID, this.gameObject);
 		
-		Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectActive", this.gameObject);
+		Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectActive_" + linkedIC.groupID, this.gameObject);
 
 	}
 	
@@ -114,10 +114,10 @@ public class Interactive : MonoBehaviour {
 
 		for(int i = 0; i < activeObjects.Count; i++){
 			
-			activeObjects[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", linkedStateControll.groupColor);
+			activeObjects[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", linkedIC.groupColor);
 			
 			iTween.StopByName(activeObjects[i], "colorActive");
-			iTween.ColorTo(activeObjects[i],iTween.Hash("name", "colorActive", "color", linkedStateControll.groupColor, "time",colorTranisitonTime, "includeChildren", false));
+			iTween.ColorTo(activeObjects[i],iTween.Hash("name", "colorActive", "color", linkedIC.groupColor, "time",colorTranisitonTime, "includeChildren", false));
 		}
 		
 		for(int i = 0; i < activeMarkers.Count; i++){
@@ -135,9 +135,9 @@ public class Interactive : MonoBehaviour {
 	public virtual void DeactivateSound(){
 
 		//Sound
-		Fabric.EventManager.Instance.PostEvent("objectDeactivate", this.gameObject);
+		Fabric.EventManager.Instance.PostEvent("objectDeactivate_"+ linkedIC.groupID, this.gameObject);
 		
-		Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectInactive", this.gameObject);
+		Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectInactive_"+ linkedIC.groupID, this.gameObject);
 
 	}
 

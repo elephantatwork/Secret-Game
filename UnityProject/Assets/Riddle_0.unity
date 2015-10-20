@@ -630,6 +630,7 @@ MonoBehaviour:
   allRecievers:
   - {fileID: 248978132}
   groupColor: {r: 1, g: .20588237, b: .286764711, a: 1}
+  groupID: 0
   groupState: 0
 --- !u!1001 &294964829
 Prefab:
@@ -2837,6 +2838,7 @@ MonoBehaviour:
   allRecievers:
   - {fileID: 123884301}
   groupColor: {r: .235294119, g: .509803951, b: .760784328, a: 1}
+  groupID: 0
   groupState: 0
 --- !u!1 &1593069584
 GameObject:
@@ -2882,6 +2884,7 @@ MonoBehaviour:
   allRecievers:
   - {fileID: 849951820}
   groupColor: {r: .0994877517, g: .801470578, b: .0189323667, a: 1}
+  groupID: 0
   groupState: 0
 --- !u!1 &1605711671
 GameObject:

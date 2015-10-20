@@ -76,4 +76,26 @@ public class Button : Sender {
 		button.transform.localPosition = Vector3.forward * startPosition;
 		readyForChange = true;
 	}
+
+	public override void ActivateSound ()
+	{
+		//		base.ActivateSound ();
+		
+		Fabric.EventManager.Instance.PostEvent("buttonActivate_" + linkedIC.groupID, this.gameObject);
+		
+		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonActive_" + linkedIC.groupID, this.gameObject);
+		
+		
+	}
+
+	public override void DeactivateSound ()
+	{
+		//		base.ActivateSound ();
+		
+		Fabric.EventManager.Instance.PostEvent("buttonDeactivate_" + linkedIC.groupID, this.gameObject);
+		
+		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonInactive_" + linkedIC.groupID, this.gameObject);
+		
+		
+	}
 }

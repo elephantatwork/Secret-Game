@@ -27,7 +27,7 @@ public class Sender : Interactive {
 	{
 		base.Change (_newState);
 
-		linkedStateControll.GetChange(localID, state);
+		linkedIC.GetChange(localID, state);
 
 	}
 

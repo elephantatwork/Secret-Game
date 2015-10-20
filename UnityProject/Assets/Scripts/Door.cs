@@ -29,10 +29,32 @@ public class Door : Reciever {
 		localAnimator.SetBool("open", true);
 	}
 
+	public override void ActivateSound ()
+	{
+//		base.ActivateSound ();
+		
+		Fabric.EventManager.Instance.PostEvent("doorActivate_" + linkedIC.groupID, this.gameObject);
+		
+		Fabric.EventManager.Instance.PostEvent("DoorState", Fabric.EventAction.SetSwitch, "doorActive_" + linkedIC.groupID, this.gameObject);
+			
+
+	}
+
 	public override void Deactivate ()
 	{
 		base.Deactivate ();
 
 		localAnimator.SetBool("open", false);
+	}
+
+	public override void DeactivateSound ()
+	{
+//		base.ActivateSound ();
+		
+		Fabric.EventManager.Instance.PostEvent("doorDeactivate_" + linkedIC.groupID, this.gameObject);
+		
+		Fabric.EventManager.Instance.PostEvent("DoorState", Fabric.EventAction.SetSwitch, "doorInactive_" + linkedIC.groupID, this.gameObject);
+		
+		
 	}
 }
