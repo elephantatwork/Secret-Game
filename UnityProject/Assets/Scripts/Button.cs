@@ -19,8 +19,8 @@ public class Button : Sender {
 		button = localTransform.Find("Moveable_Button").GetComponent<Moveable_Button>();
 		startPosition = button.transform.localPosition.z;
 
-		Fabric.EventManager.Instance.PostEvent("ButtonState",Fabric.EventAction.PlaySound, this.gameObject);
-
+		Fabric.EventManager.Instance.PostEvent("ButtonState",Fabric.EventAction.PlaySound, null, this.gameObject);
+		print ("Start");
 	}
 
 
@@ -88,7 +88,7 @@ public class Button : Sender {
 		
 		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonActive_" + linkedIC.groupID, this.gameObject);
 		
-		
+//		print ("Activate");	
 	}
 
 	public override void DeactivateSound ()

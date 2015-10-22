@@ -526,7 +526,7 @@ MonoBehaviour:
   _volumeThreshold: 0
   _audioBusManager:
     _audioBuses: []
-  _enableDebugLog: 0
+  _enableDebugLog: 1
   _bakeComponentInstances: 0
   _allowExternalGroupComponents: 0
   _forceAxisVector: {x: 0, y: 0, z: 0}
