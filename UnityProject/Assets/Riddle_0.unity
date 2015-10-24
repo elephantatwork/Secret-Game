@@ -400,8 +400,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 304154706}
   - 114: {fileID: 304154709}
-  - 114: {fileID: 304154708}
-  - 114: {fileID: 304154707}
   m_Layer: 0
   m_Name: sfx 3D
   m_TagString: Untagged
@@ -421,90 +419,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1958296421}
   m_RootOrder: 1
---- !u!114 &304154707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11457452, guid: bb4d5b614e3b14cf2b32da3be60b9f0d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 304154705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 2066047398, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchPresetData:
-    _sourcePreset: 
-    _targetPreset: 
-  globalParameterData:
-    _name: 
-    _value: 0
-  globalSwitchParameterData:
-    _name: 
-    _switch: 
-  transitionToSnapshotData:
-    _snapshot: 
-    _timeToReach: 0
-  _eventName: PlayerRotation
-  _eventAction: 0
-  _trigger: 0
-  _eventValue: 
-  _eventParameter: 1
-  _eventParameterName: 
-  _delay: 0
-  _probability: 100
-  _eventTriggerType: 0
-  _ignoreGameObject: 0
-  _addToQueue: 0
-  _min: 0
-  _max: 1
-  _dspType: 0
-  _timeToTarget: 0
-  _curve: .5
-  _parentGameObject: {fileID: 304154705}
-  _useEventID: 0
---- !u!114 &304154708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11414824, guid: bb4d5b614e3b14cf2b32da3be60b9f0d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 304154705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 2066047398, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchPresetData:
-    _sourcePreset: 
-    _targetPreset: 
-  globalParameterData:
-    _name: 
-    _value: 0
-  globalSwitchParameterData:
-    _name: 
-    _switch: 
-  transitionToSnapshotData:
-    _snapshot: 
-    _timeToReach: 0
-  _eventName: PlayerMovement
-  _eventAction: 0
-  _trigger: 0
-  _eventValue: 151012_FL_idle
-  _eventParameter: 1
-  _eventParameterName: 
-  _delay: 0
-  _probability: 100
-  _eventTriggerType: 0
-  _ignoreGameObject: 0
-  _addToQueue: 0
-  _min: 0
-  _max: 1
-  _dspType: 0
-  _timeToTarget: 0
-  _curve: .5
-  _parentGameObject: {fileID: 304154705}
-  _useEventID: 0
 --- !u!114 &304154709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3345,7 +3259,7 @@ MonoBehaviour:
   _componentHolder: {fileID: 0}
   _onEventNotifyEventName: 
   _selectedComponent: {fileID: 404399150}
-  _startOnSwitch: 0
+  _startOnSwitch: 1
   _syncToMusicOnFirstPlay: 1
   _switchComponentSwitchType: 2
   _useGlobalSwitch: 0
