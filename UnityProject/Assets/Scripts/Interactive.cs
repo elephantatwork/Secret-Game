@@ -67,7 +67,7 @@ public class Interactive : MonoBehaviour {
 	public virtual void Change(bool _newState){
 
 		string _state = (_newState) ? "active" : "inactive";
-		Debug.Log("Core " + linkedIC.name + ", Object :" + this.name + " is now " + _state);
+//		Debug.Log("Core " + linkedIC.name + ", Object :" + this.name + " is now " + _state);
 
 		state = _newState;
 

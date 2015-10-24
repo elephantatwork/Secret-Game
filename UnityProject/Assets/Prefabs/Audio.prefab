@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: -889743216, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxInstances: 1
+  _maxInstances: 20
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   _componentHolder: {fileID: 0}
   _onEventNotifyEventName: 
   _selectedComponent: {fileID: 11484022}
-  _startOnSwitch: 1
+  _startOnSwitch: 0
   _syncToMusicOnFirstPlay: 1
   _switchComponentSwitchType: 2
   _useGlobalSwitch: 0

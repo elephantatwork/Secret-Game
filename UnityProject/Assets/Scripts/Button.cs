@@ -19,8 +19,8 @@ public class Button : Sender {
 		button = localTransform.Find("Moveable_Button").GetComponent<Moveable_Button>();
 		startPosition = button.transform.localPosition.z;
 
-		Fabric.EventManager.Instance.PostEvent("ButtonState",Fabric.EventAction.PlaySound, null, this.gameObject);
-		print ("Start");
+		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.PlaySound, null, this.gameObject);
+//		print ("Start");
 	}
 
 
@@ -83,12 +83,13 @@ public class Button : Sender {
 	public override void ActivateSound ()
 	{
 		//		base.ActivateSound ();
+		print (linkedIC.groupID);
 		
 		Fabric.EventManager.Instance.PostEvent("buttonActivate_" + linkedIC.groupID, this.gameObject);
-		
-		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonActive_" + linkedIC.groupID, this.gameObject);
-		
-//		print ("Activate");	
+
+		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonActive_1", this.gameObject);
+//		Fabric.EventManager.Instance.GetEventInfo("ButtonState", this.gameObject);
+		print ("Activate");	
 	}
 
 	public override void DeactivateSound ()
@@ -97,8 +98,8 @@ public class Button : Sender {
 		
 		Fabric.EventManager.Instance.PostEvent("buttonDeactivate_" + linkedIC.groupID, this.gameObject);
 		
-		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonInactive_" + linkedIC.groupID, this.gameObject);
+		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonInactive_1", this.gameObject);
 		
-		
+		print ("Deactivate");	
 	}
 }

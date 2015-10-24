@@ -14,6 +14,7 @@ public class InteractiveCore : MonoBehaviour {
 	private void Awake(){
 
 //		print(Helper.instance);
+		groupID = 1;
 
 //		groupColor = Helper.instance.interactionColors[Random.Range(0,Helper.instance.interactionColors.Length)];
 	}
