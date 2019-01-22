@@ -28,9 +28,9 @@ public class Door_Reciever : Reciever {
 	{
 //		base.ActivateSound ();
 		
-		Fabric.EventManager.Instance.PostEvent("doorActivate_" + linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("doorActivate_" + linkedIC.groupID, this.gameObject);
 		
-		Fabric.EventManager.Instance.PostEvent("DoorState", Fabric.EventAction.SetSwitch, "doorActive_" + linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("DoorState", Fabric.EventAction.SetSwitch, "doorActive_" + linkedIC.groupID, this.gameObject);
 			
 
 	}
@@ -46,9 +46,9 @@ public class Door_Reciever : Reciever {
 	{
 //		base.ActivateSound ();
 		
-		Fabric.EventManager.Instance.PostEvent("doorDeactivate_" + linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("doorDeactivate_" + linkedIC.groupID, this.gameObject);
 		
-		Fabric.EventManager.Instance.PostEvent("DoorState", Fabric.EventAction.SetSwitch, "doorInactive_" + linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("DoorState", Fabric.EventAction.SetSwitch, "doorInactive_" + linkedIC.groupID, this.gameObject);
 		
 		
 	}

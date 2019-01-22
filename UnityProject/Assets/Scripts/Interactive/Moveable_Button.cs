@@ -9,10 +9,10 @@ public class Moveable_Button : Moveable {
 
 		if(localRigidbody.velocity.magnitude > 0.01F){
 			//Sound
-			Fabric.EventManager.Instance.PostEvent("objectMoves", Fabric.EventAction.SetVolume, 1.0F, this.gameObject);
+			// Fabric.EventManager.Instance.PostEvent("objectMoves", Fabric.EventAction.SetVolume, 1.0F, this.gameObject);
 
 		}else{
-			Fabric.EventManager.Instance.PostEvent("objectMoves", Fabric.EventAction.SetVolume, 0.0F, this.gameObject);
+			// Fabric.EventManager.Instance.PostEvent("objectMoves", Fabric.EventAction.SetVolume, 0.0F, this.gameObject);
 
 		}
 	}

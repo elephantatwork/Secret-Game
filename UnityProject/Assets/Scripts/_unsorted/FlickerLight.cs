@@ -9,7 +9,7 @@ public class FlickerLight : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		light_Sprite = transform.FindChild("Light_Sprite");
+		light_Sprite = transform.Find("Light_Sprite");
 
 		light_Sprite.GetComponent<Renderer>().material.SetColor("_TintColor", this.GetComponent<Light>().color);
 

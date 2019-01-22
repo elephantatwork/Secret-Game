@@ -11,7 +11,7 @@ public class ArrivingWorldIntro : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		playerTransform = Camera.main.transform;
-		introDistance = this.transform.FindChild("IntroDistance");
+		introDistance = this.transform.Find("IntroDistance");
 	
 	}
 

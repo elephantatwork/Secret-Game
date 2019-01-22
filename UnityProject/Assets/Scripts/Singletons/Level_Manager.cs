@@ -25,7 +25,7 @@ public class Level_Manager : MonoBehaviour {
 	public void StartLevel () {
 
 		level_Parent = GameObject.Find("Level").transform;
-		entry_Point = level_Parent.FindChild("Entry");
+		entry_Point = level_Parent.Find("Entry");
 
 		entry_Point.GetComponent<Level_Entry>().Action(true);
 	

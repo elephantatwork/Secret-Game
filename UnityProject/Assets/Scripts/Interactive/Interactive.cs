@@ -111,9 +111,9 @@ public class Interactive : MonoBehaviour {
 
 	public virtual void ActivateSound(){
 
-		Fabric.EventManager.Instance.PostEvent("objectActivate_"+ linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("objectActivate_"+ linkedIC.groupID, this.gameObject);
 		
-		Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectActive_" + linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectActive_" + linkedIC.groupID, this.gameObject);
 
 	}
 	
@@ -143,9 +143,9 @@ public class Interactive : MonoBehaviour {
 	public virtual void DeactivateSound(){
 
 		//Sound
-		Fabric.EventManager.Instance.PostEvent("objectDeactivate_"+ linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("objectDeactivate_"+ linkedIC.groupID, this.gameObject);
 		
-		Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectInactive_"+ linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("InteractiveState", Fabric.EventAction.SetSwitch, "objectInactive_"+ linkedIC.groupID, this.gameObject);
 
 	}
 

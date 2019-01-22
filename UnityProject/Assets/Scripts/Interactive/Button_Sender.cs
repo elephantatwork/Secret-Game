@@ -19,7 +19,6 @@ public class Button_Sender : Sender {
 		button = localTransform.Find("Moveable_Button").GetComponent<Moveable_Button>();
 		startPosition = button.transform.localPosition.z;
 
-		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.PlaySound, null, this.gameObject);
 
 	}
 
@@ -83,9 +82,9 @@ public class Button_Sender : Sender {
 		//		base.ActivateSound ();
 		print (linkedIC.groupID);
 		
-		Fabric.EventManager.Instance.PostEvent("buttonActivate_" + linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("buttonActivate_" + linkedIC.groupID, this.gameObject);
 
-		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonActive_1", this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonActive_1", this.gameObject);
 //		Fabric.EventManager.Instance.GetEventInfo("ButtonState", this.gameObject);
 		print ("Activate");	
 	}
@@ -94,9 +93,9 @@ public class Button_Sender : Sender {
 	{
 		//		base.ActivateSound ();
 		
-		Fabric.EventManager.Instance.PostEvent("buttonDeactivate_" + linkedIC.groupID, this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("buttonDeactivate_" + linkedIC.groupID, this.gameObject);
 		
-		Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonInactive_1", this.gameObject);
+		// Fabric.EventManager.Instance.PostEvent("ButtonState", Fabric.EventAction.SetSwitch, "buttonInactive_1", this.gameObject);
 		
 		print ("Deactivate");	
 	}

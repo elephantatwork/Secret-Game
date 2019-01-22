@@ -134,29 +134,29 @@ public class Player_Movement : MonoBehaviour
 	
 	}
 
-	private void Sound(soundStates _newState){
+	// private void Sound(soundStates _newState){
 
-		if(_newState == soundStates.forward)
-			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerForward", gameObject);
+	// 	if(_newState == soundStates.forward)
+	// 		Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerForward", gameObject);
 
-		if(_newState == soundStates.back)
-			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerBack", gameObject);
+	// 	if(_newState == soundStates.back)
+	// 		Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerBack", gameObject);
 
-		if(_newState == soundStates.idle)
-			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerIdle", gameObject);
+	// 	if(_newState == soundStates.idle)
+	// 		Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerIdle", gameObject);
 
-		if(_newState == soundStates.onlyRotation)
-			Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerRotationOnly", gameObject);
+	// 	if(_newState == soundStates.onlyRotation)
+	// 		Fabric.EventManager.Instance.PostEvent("PlayerMovement", Fabric.EventAction.SetSwitch, "playerRotationOnly", gameObject);
 
-		if(_newState == soundStates.rotationLeft)
-			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationLeft", gameObject);
+	// 	if(_newState == soundStates.rotationLeft)
+	// 		Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationLeft", gameObject);
 
-		if(_newState == soundStates.rotationRight)
-			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationRight", gameObject);
+	// 	if(_newState == soundStates.rotationRight)
+	// 		Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationRight", gameObject);
 
-		if(_newState == soundStates.rotationIdle)
-			Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationIdle", gameObject);
-	}
+	// 	if(_newState == soundStates.rotationIdle)
+	// 		Fabric.EventManager.Instance.PostEvent("PlayerRotation", Fabric.EventAction.SetSwitch, "playerRotationIdle", gameObject);
+	// }
 
 	private void ToggleFast (bool _state)
 	{
@@ -173,12 +173,12 @@ public class Player_Movement : MonoBehaviour
 			
 		movingValue += _direction;
 
-		if(movingValue == 1)
-			Sound(soundStates.forward);
-		else if(movingValue == -1)
-			Sound(soundStates.back);
-		else if(movingValue == 0)
-			Sound(soundStates.idle);
+		// if(movingValue == 1)
+		// 	Sound(soundStates.forward);
+		// else if(movingValue == -1)
+		// 	Sound(soundStates.back);
+		// else if(movingValue == 0)
+		// 	Sound(soundStates.idle);
 
 	}
 
@@ -196,18 +196,18 @@ public class Player_Movement : MonoBehaviour
 		rotationValue += _direction;
 
 		//Sound
-		if(rotationValue == 1)
-			Sound(soundStates.rotationRight);
-		else if(rotationValue == -1)
-			Sound(soundStates.rotationLeft);
-		else if(rotationValue == 0){
-			Sound(soundStates.rotationIdle);
-			if(movingValue == 0)
-				Sound(soundStates.idle);
-		}
+		// if(rotationValue == 1)
+		// 	Sound(soundStates.rotationRight);
+		// else if(rotationValue == -1)
+		// 	Sound(soundStates.rotationLeft);
+		// else if(rotationValue == 0){
+		// 	Sound(soundStates.rotationIdle);
+		// 	if(movingValue == 0)
+		// 		Sound(soundStates.idle);
+		// }
 
-		if(rotationValue != 0 && movingValue == 0)
-			Sound(soundStates.onlyRotation);
+		// if(rotationValue != 0 && movingValue == 0)
+		// 	Sound(soundStates.onlyRotation);
 			
 	}
 
