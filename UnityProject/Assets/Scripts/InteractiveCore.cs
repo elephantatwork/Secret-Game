@@ -5,6 +5,15 @@ public class InteractiveCore : MonoBehaviour {
 	
 	public Sender[] allSenders;
 	public Reciever[] allRecievers;
+	
+	public enum interactiveType{
+
+		toggle,
+		single,
+		help
+	}
+
+	public interactiveType interactive_Type;
 
 	public Color groupColor;
 	public int groupID = 1; // 1, 2 or 3
@@ -16,13 +25,15 @@ public class InteractiveCore : MonoBehaviour {
 //		print(Helper.instance);
 		groupID = 1;
 
-//		groupColor = Helper.instance.interactionColors[Random.Range(0,Helper.instance.interactionColors.Length)];
+		groupColor = Helper.instance.interactionColors[Random.Range(0,Helper.instance.interactionColors.Length)];
 	}
 
 	private void Start(){
 
 //		groupColor = Helper.instance.interactionColors[Random.Range(0,Helper.instance.interactionColors.Length)];
 
+		//Search all Recievers
+		allRecievers = this.GetComponentsInChildren<Reciever>();
 		
 		//Link to Recievers
 		for(int i = 0; i < allRecievers.Length; i++){
@@ -39,6 +50,9 @@ public class InteractiveCore : MonoBehaviour {
 //			allRecievers[i].Change(allRecievers[i].state);
 //			}
 		}
+
+		//Search all Recievers
+		allSenders = this.GetComponentsInChildren<Sender>();
 
 		//Link to Senders
 		for(int ii = 0; ii < allSenders.Length; ii++){
@@ -57,16 +71,34 @@ public class InteractiveCore : MonoBehaviour {
 		}
 	}
 
+	//Toggle Way
 	public void GetChange(int _localID, bool _newState){
 
-		bool _currentState = CheckSenders();
-		if(groupState != _currentState){
+		switch(interactive_Type){
 
-			groupState = _currentState;
+			//all senders contribute to the group state which is represented by all recievers
+			case interactiveType.toggle:
 
-			for(int i = 0; i < allRecievers.Length; i++){
-				allRecievers[i].Change(groupState);
-			}
+				bool _currentState = CheckSenders();
+
+				if(groupState != _currentState){
+
+					groupState = _currentState;
+
+					for(int i = 0; i < allRecievers.Length; i++){
+						allRecievers[i].Change(groupState);
+					}	
+				}
+				break;
+
+			//one sender changes everything
+			case interactiveType.single:
+
+				for(int i = 0; i < allRecievers.Length; i++){
+					allRecievers[i].Change(_newState);
+				}	
+
+			break;
 		}
 	}
 

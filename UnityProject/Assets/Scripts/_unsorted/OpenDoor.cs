@@ -5,10 +5,10 @@ public class OpenDoor : BaseAction {
 
 	public GameObject linkedDoor;
 
+//	public override 
+	public override void Action(bool _state){
 
-	public override void Action(){
-
-		base.Action();
+		base.Action(_state);
 
 		linkedDoor.SetActive(false);
 

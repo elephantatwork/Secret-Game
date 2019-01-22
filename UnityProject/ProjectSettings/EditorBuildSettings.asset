@@ -6,6 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Level1.unity
+    path: Assets/Scenes/Closing_Market.unity
   - enabled: 1
-    path: Assets/MainMenu.unity
+    path: Assets/Scenes/Of_Returns_and_HomeComings.unity
+  - enabled: 1
+    path: Assets/Scenes/Riddle_0.unity
+  - enabled: 1
+    path: Assets/Scenes/The_Socialist_House.unity

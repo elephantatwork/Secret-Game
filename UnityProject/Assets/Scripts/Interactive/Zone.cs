@@ -6,32 +6,40 @@ using System.Collections;
 /// </summary>
 public class Zone : Sender {
 
+	public bool on_Enter;
+	public bool on_Exit;
+
+	public bool on_Enter_Message = true;
+	public bool on_Exit_Message = false;
+
 	public override void Awake ()
 	{
 		base.Awake ();
 
-//		int layerMask = 1 << LayerMask.NameToLayer("Zone");
+	}
 
-//		for(int i = 0; i < activeObjects.Count; i++){
-//			activeObjects[i].layer = LayerMask.NameToLayer("Zones")	;
-//		}
+	public override void Initialize ()
+	{
+//		base.Initialize ();
 	}
 
 	public void OnTriggerEnter(Collider _coll){
 
-		if(_coll.tag == "Player"){
+		if(on_Enter){
+			if(_coll.tag == "Player"){
 			 
-//			Activate();
-			Change(true);
+				Change(on_Enter_Message);
+			}
 		}
 	}
 
 	public void OnTriggerExit(Collider _coll){
 
-		if(_coll.tag == "Player"){
+		if(on_Exit){
+			if(_coll.tag == "Player"){
 			
-//			();
-			Change(false);
+				Change(on_Exit_Message);
+			}
 		}
 	}
 }
